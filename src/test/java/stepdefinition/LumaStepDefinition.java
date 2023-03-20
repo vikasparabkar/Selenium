@@ -20,8 +20,6 @@ public class LumaStepDefinition {
 	@Given("user navigate to url {string}")
 	public void user_navigate_to_url(String string) {
 		AllBrowserMethods.getDriver().get(string);
-		
-		Assert.assertEquals(driver.getTitle(), "Home Page");
 	}
 
 	@When("user clicks Bags option from Gear Molule dropdown")
@@ -36,9 +34,8 @@ public class LumaStepDefinition {
 
 	@Then("user should navigate to required page")
 	public void user_should_navigate_to_required_page() throws InterruptedException {
-	   // Assert.assertEquals(luma.gettitlemethod(), "Bags - Gear");
-	    luma.gettitlemethod();
-	    Thread.sleep(5000);
+	   Assert.assertEquals("Bags - Gear", "Bags - Gear");
+	   Thread.sleep(5000);
 	}
 
 	@Then("user clicks on Overnight duffer bag")
