@@ -4,6 +4,7 @@ import java.time.Duration;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 
@@ -24,9 +25,14 @@ public class AllBrowserMethods {
 		
 		System.out.println("browser value is: "+ browser);
 		
+		
+		
 		if(browser.equals("chrome")) {
+			ChromeOptions c=new ChromeOptions();
+			c.addArguments("--remote-allow-origins=*");
+			
 			WebDriverManager.chromedriver().setup();
-			tlDriver.set(new ChromeDriver());
+			tlDriver.set(new ChromeDriver(c));
 		}
 		else if(browser.equals("firefox")) {
 			WebDriverManager.firefoxdriver().setup();

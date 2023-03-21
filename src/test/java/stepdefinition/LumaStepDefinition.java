@@ -1,5 +1,6 @@
 package stepdefinition;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
@@ -20,6 +21,7 @@ public class LumaStepDefinition {
 	@Given("user navigate to url {string}")
 	public void user_navigate_to_url(String string) {
 		AllBrowserMethods.getDriver().get(string);
+		
 	}
 
 	@When("user clicks Bags option from Gear Molule dropdown")
