@@ -47,7 +47,7 @@ public class AllBrowserMethods {
 		}
 		
 		getDriver().manage().deleteAllCookies();
-		getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		getDriver().manage().window().maximize();
 		return getDriver();
 	}
