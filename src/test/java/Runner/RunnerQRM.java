@@ -9,7 +9,7 @@ import io.cucumber.testng.CucumberOptions;
 		plugin= {"pretty"},
 		features = "src/test/resources/Features/QRM.feature",
 glue = {"stepdefinition","Hooks"}, monochrome = true,
-dryRun=false, tags="not @smoke"
+dryRun=false, tags="@smoke"
 )
 public class RunnerQRM extends AbstractTestNGCucumberTests{
 	@Override

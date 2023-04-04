@@ -7,7 +7,7 @@ import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
 		plugin= {"pretty"},
-		features = "src/test/resources/Features/Rshetty.feature",
+		features = "src/test/resources/Features",
 		glue = {"stepdefinition","Hooks"}, 
 		monochrome = true,
 		dryRun=false

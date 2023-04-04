@@ -31,6 +31,8 @@ public class AllBrowserMethods {
 			ChromeOptions c=new ChromeOptions();
 			c.addArguments("--remote-allow-origins=*");
 			
+			c.setHeadless(true);
+			
 			WebDriverManager.chromedriver().setup();
 			tlDriver.set(new ChromeDriver(c));
 		}

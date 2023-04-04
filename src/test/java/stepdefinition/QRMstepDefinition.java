@@ -3,14 +3,18 @@ package stepdefinition;
 import static org.testng.Assert.assertEquals;
 
 import java.time.Duration;
+import java.util.List;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
 import BasePackage.AllBrowserMethods;
 import BasePackage.QRMbaseClass;
 import POMclassQRM.QRMwebelementsAndMethodsPOM;
+import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -36,6 +40,19 @@ public class QRMstepDefinition {
 //		hrm=new QRMwebelementsAndMethodsPOM(base.driver);
 //		hrm.loginHRMcredentials();
 	}
+	
+//	@When("user enters usernam and password in boxes")
+//	public void user_enters_usernam_and_password_in_boxes(DataTable dataTable) {
+//		List<Map<String, String>>userData=dataTable.asMaps(String.class, String.class);
+//		//driver.findElement(By.xpath("")).sendKeys(userData.get(0).get(1));
+//		
+//		for(Map<String, String> e: userData) {
+//			driver.findElement(By.xpath("//input[@placeholder='Username']")).sendKeys(e.get("usernam"));
+//			driver.findElement(By.xpath("//input[@placeholder='Password']")).sendKeys(e.get("password"));
+//		}
+//		
+//	}
+	
 
 	@Then("user hits on qrl login button")
 	public void user_hits_on_qrl_login_button() throws InterruptedException {

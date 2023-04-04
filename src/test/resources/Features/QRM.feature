@@ -3,6 +3,11 @@ Feature: checking functionality of qrm website
 Background: some important steps to login
 Given user navigate to qrm login page url
 When user enters username and password in boxes
+
+|usernam|password|
+|Admin|admin123|
+|vikas|123|
+
 Then user hits on qrl login button
 
 Scenario: login functionality

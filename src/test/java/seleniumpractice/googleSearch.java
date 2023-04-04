@@ -17,9 +17,12 @@ public class googleSearch {
 		
 		ChromeOptions co=new ChromeOptions();
 		co.addArguments("--remote-allow-origins=*");
+		co.setHeadless(true);
 		
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver=new ChromeDriver(co);
+		
+		
 		
 		//driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
@@ -27,13 +30,13 @@ public class googleSearch {
 		driver.get("https://www.google.com/");
 		
 		WebElement googleserach=driver.findElement(By.name("q"));
-		googleserach.sendKeys("mackbook");
+		googleserach.sendKeys("oppo");
 		List<WebElement> search=driver.findElements(By.cssSelector("ul li.sbct"));
 		
 		for(int i=0;i<search.size();i++) {
 			
 			System.out.println(search.get(i).getText());
-			if(search.get(i).getText().equals("macbook")) {
+			if(search.get(i).getText().equalsIgnoreCase("oppo a78 5g")) {
 				search.get(i).click();
 				break;
 			}

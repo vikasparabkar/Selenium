@@ -6,7 +6,7 @@
       <class name="Runner.RshettyRunner">
         <methods>
           <include name="setUpClass"/>
-          <include name="runScenario" invocation-numbers="1 4"/>
+          <include name="runScenario" invocation-numbers="3 4 5 2 17 12 15 1"/>
           <include name="tearDownClass"/>
         </methods>
       </class> <!-- Runner.RshettyRunner -->
