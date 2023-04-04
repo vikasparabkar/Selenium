@@ -26,11 +26,13 @@ public class dezlearnSteps {
 	    driver.get("https://www.ebay.com/");
 	}
 
+
 	@When("I am clicking on ebay logo")
 	public void i_am_clicking_on_ebay_logo() {
 		System.out.println("I am clicking on ebay logo");
 		
 		driver.findElement(By.xpath("//button[@id='gh-shop-a']")).click();
+
 	}
 
 	@Then("I am getting error")
